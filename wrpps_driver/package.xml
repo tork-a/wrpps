@@ -1,0 +1,28 @@
+<package format="2">
+  <name>wrpps_driver</name>
+  <version>0.1.0</version>
+  <description>The wrpps_driver package</description>
+  <maintainer email="dev@opensource-rotobics.tokyo.jp">TORK</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>wrpps_msgs</build_depend>
+
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>python3-serial</exec_depend>
+  <exec_depend>wrpps_msgs</exec_depend>
+
+  <export>
+  </export>
+
+</package>
