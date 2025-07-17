@@ -4,17 +4,17 @@ Linux / ROS Driver Software for WrPPS Sensor Board.
 
 ---
 
-## Hardware Outline
+## Hardware
 
 WrSSR Single Board has 2 type of proximity sensors.
 
 ![WrPPS Single Board v1.1 Dimensions](wrpps_driver/doc/images/wrpps-single-board_dimensions_small.png)
 
-- Connector Socket
-  - SH Connector
-    - 4 pin
-    - SM04B-SRSS-TB(LF)(SN) - JST
-    - https://www.jst-mfg.com/product/index.php?series=231
+- Dimensions
+  - Width: 18 [mm]
+  - Length: 18 [mm]
+  - Height: 4.7 [mm]
+- Weight: 1.5 [g]
 - Sensors
   - Time-of-Flight (ToF) Ranging Sensor
     - VL53L0X - STMicroelectronics
@@ -24,13 +24,14 @@ WrSSR Single Board has 2 type of proximity sensors.
     - VCNL4040 - VISHAY
       - https://www.vishay.com/ja/product/84274/
       - Range: ≦ 0.2 [m]
-- Dimensions
-  - Width: 18 [mm]
-  - Length: 18 [mm]
-  - Height: 4.7 [mm]
-- Weight: 1.5 [g]
+- Connector Socket
+  - SH Connector
+    - 4 pin
+    - SM04B-SRSS-TB(LF)(SN) - JST
+      - https://www.jst-mfg.com/product/index.php?series=231
 
-### Connector Pin Asign
+
+### Connector Pin Asignment
 
 The pin assignment follows the order 1-2-3-4 from the right side, as viewed in the image above, using either ● mark as a reference.
 
