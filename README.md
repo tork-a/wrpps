@@ -41,12 +41,6 @@ SH Connector<br> Pin No. | Arduino<br> Leonardo / Uno R3 | Arduino<br> nano / na
 3 | SDA | A4 (SDA)
 4 | SCL | A5 (SCL)
 
-<br>
-
-## System Requirements
-
-- Ubuntu 20.04 + ROS Noetic
-- Arduino IDE 1.8.19
 
 ### Arduino Boards
 
@@ -57,20 +51,48 @@ The following models of the Arduino series have been confirmed to work.
 - Arduino nano
 - Arduino nano Every
 
+<br>
+
+
+## Software
+
+### System Requirements
+
+- Ubuntu 20.04 + ROS Noetic
+- Arduino IDE 1.8.19
+
+
+### ROS Topic
+
+In the ROS software for WrPPS Single Board, ROS Topic is published with a custom message type `WrPPSRange`.
+
+- `WRPPSRange`
+  - `header` : Header
+    - `seq` : uint32 - sequence ID
+    - `stamp` : Type: time
+      - `secs` : Type: int32 - seconds
+      - `nsecs` : Type: int32 - nano seconds
+    - `frame_id` : Type: string - frame ID
+  - `intensity` : Type: uint32 - Intenisty Level
+  - `distance` : Type: float64 - Distance [m] measured by ToF
+
 
 ## Installation
 
 ### Arduino Sketch
+
+Download and use the Arduino sketch at the link below.
 
 - test_wrpps_single_board.ino
   - https://github.com/pazeshun/jsk_apc/blob/test_wrpps_single_board/demos/sphand_ros/sphand_driver/arduino/test_wrpps_single_board/test_wrpps_single_board.ino
 
 #### Sketch Upload
 
-1. Connect WrPPS Single Board to Arduino (Vcc (3.3V), GND, SCL, and SDA)
-2. Install Arduino IDE 1.8.9
-3. Search and install VL53L0X on library manager of Arduino IDE
-4. Upload test_wrpps_single_board.ino to Arduino
+1. Install Arduino IDE 1.8.9 on your Ubuntu PC
+2. Search and install VL53L0X on library manager of Arduino IDE
+3. Connect WrPPS Single Board to Arduino (Vcc (3.3V), GND, SCL, and SDA)
+4. Connect the Arduino board to your Ubuntu PC with a USB cable
+5. Upload test_wrpps_single_board.ino to Arduino
 
 #### Check the Serial Communication
 
@@ -79,7 +101,7 @@ Once `test_wrpps_single_board.ino ` sketch has been uploaded to your Arduino, us
 When you bring your hand close to the board, the printed values should change (intensity increases and tof decreases).
 
 
-### ROS Software
+### Linux / ROS Software
 
 ``` bash
 mkdir -p ~/wrpps_ws/src
@@ -95,9 +117,16 @@ source ~/wrpps_ws/devel/setup.bash
 
 ## How to Use
 
+
+### Connect WrPPS Single Board
+
+1. Connect WrPPS Signle Board to your Arduino board that `test_wrpps_single_board.ino` sketch has been installed.
+2. Connect the Arduino board to your Ubuntu PC with a USB cable.
+
+
 ### Launching Software
 
-Launching `wrpps_ros.launch` including WrPPS driver and ROS publisher.
+Launching `wrpps_ros.launch` including ROS publisher with WrPPS driver software.
 
 **Terminal 1**
 ``` bash
