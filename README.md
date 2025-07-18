@@ -1,12 +1,12 @@
 # wrpps
 
-Linux / ROS Driver Software for WrPPS Sensor Board.
+Linux / ROS Driver Software for WrPPS Board.
 
 ---
 
 ## Hardware
 
-WrSSR Single Board has 2 type of proximity sensors.
+WrRPPS Single Board has 2 type of proximity sensors.
 
 ![WrPPS Single Board v1.1 Dimensions](wrpps_driver/doc/images/wrpps-single-board_dimensions_small.png)
 
